@@ -1,0 +1,9 @@
+<h1>여기는 모든게시물이 보이는 곳입니다.</h1>
+<p>Find me in app/views/board/index.html.erb</p>
+
+<% @boards.each do |b| %> 
+    <h1><%= b.title %></h1>
+    <%= link_to '글보기', "/board/show/#{b.id}"%>
+    <%= link_to '삭제', "/board/destroy/#{b.id}"%>
+    <%= link_to '수정', "/board/edit/#{b.id}"%>
+<% end %>
